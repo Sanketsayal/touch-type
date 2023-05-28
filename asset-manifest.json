@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/touch-type/static/css/main.3e44952d.css",
+    "main.js": "/touch-type/static/js/main.8b8ac98c.js",
+    "index.html": "/touch-type/index.html",
+    "main.3e44952d.css.map": "/touch-type/static/css/main.3e44952d.css.map",
+    "main.8b8ac98c.js.map": "/touch-type/static/js/main.8b8ac98c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e44952d.css",
+    "static/js/main.8b8ac98c.js"
+  ]
+}
