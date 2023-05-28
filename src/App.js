@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import {data} from './data';
+import { setPara } from './Redux/TypeSlice';
+import { useDispatch } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
+import {Header, Home, Result} from './components'
+
 
 function App() {
+
+  const dispatch=useDispatch()
+
+  useEffect(()=>{
+    const setParagraph=()=>{
+      let  randomElement = data[Math.floor(Math.random() * data.length)]
+      dispatch(setPara(randomElement));
+    }
+    setParagraph();
+  },)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div id='App'>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/results' element={<Result />} />
+      </Routes> 
+
     </div>
-  );
-}
+  )
+};
 
 export default App;
